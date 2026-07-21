@@ -91,6 +91,8 @@ print(any(sentence.strip().startswith("By the time") for sentence in adwentures_
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
 print("\n--- Task 10 ---")
-last_sentence_word_count = len(adwentures_of_tom_sawer_sentences[-2].split())
-print(f"Кількість слів в останньому реченні: {last_sentence_word_count}")
+adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(".")
+adwentures_of_tom_sawer_sentences.pop()
 
+last_sentence_word_count = len(adwentures_of_tom_sawer_sentences[-1].split())
+print(f"Кількість слів в останньому реченні: {last_sentence_word_count}")
