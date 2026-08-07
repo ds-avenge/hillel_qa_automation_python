@@ -1,6 +1,6 @@
 # QA Automation with Python
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-Testing-green?logo=pytest)
 ![Playwright](https://img.shields.io/badge/Playwright-Web%20Automation-2EAD33?logo=playwright&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&logoColor=white)
