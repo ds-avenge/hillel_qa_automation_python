@@ -24,9 +24,13 @@ class Rhombus:
 
             super().__setattr__("angle_b", 180 - value)
 
+        elif name == "angle_b":
+            raise AttributeError("Кут b не можна змінювати напряму. Він обчислюється автоматично.")
+
         super().__setattr__(name, value)
 
-example = Rhombus(side_a = 5, angle_a = 125)
+example = Rhombus(side_a = 5, angle_a = 1)
+
 print(
     f"Сторона a: {example.side_a}\n"
     f"Кут a: {example.angle_a}\n"
