@@ -9,17 +9,12 @@ file_1 = base_path / "random.csv"
 file_2 = base_path / "random-michaels.csv"
 result_file = base_path / "result_semkov.csv"
 
-def remove_duplicates_from_csv(file1, file2, result):
-    unique_rows = []
+def read_csv(file_path):
+    with open(file_path, 'r', newline="", encoding="utf-8") as file:
+        return {tuple(row) for row in csv.reader(file)}
 
-    for file in [file1, file2]:
-        with open(file, 'r', newline="", encoding="utf-8") as file:
-            reader = csv.reader(file)
-            for row in reader:
-                if row and row[-1] == "":
-                    row = row[:-1]
-                if row not in unique_rows:
-                    unique_rows.append(row)
+def remove_duplicates_from_csv(file1, file2, result):
+    unique_rows = read_csv(file1) | read_csv(file2)
 
     with open(result, 'w', newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
