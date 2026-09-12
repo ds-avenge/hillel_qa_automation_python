@@ -72,23 +72,9 @@ def get_gender(first_name):
 			break
 	return gender
 
-def get_country(first_name = None):
-	countryFile = csv.reader(open(full_path('data.csv'), 'r'))
-	country = ""
-	if first_name != None:
-		for data in countryFile:
-			if data[0] != '' and data[0] == first_name:
-				country = data[3]
-				break
-		if country == "":
-			print("Specified user data is not available. Tip: Generate random country.")
-	else:
-		filteredData = []
-		for data in countryFile:
-			if data[12] != '':
-				filteredData.append(data[12])
-		country = choice(filteredData)
-	return country
+def get_country():
+	countries = ["Ukraine", "Moldova", "Germany", "France", "Poland"]
+	return choice(countries)
 
 def get_full_name(gender = None):
 	return get_first_name(gender) + " " + get_last_name()
@@ -259,7 +245,7 @@ def get_birthdate(startAge = None, endAge = None, _format = "%d %b, %Y"):
 
 def get_address():
 	full_addr = []
-	addrParam = ['street', 'landmark', 'area', 'city', 'state', 'country', 'pincode']
+	addrParam = ['street', 'landmark', 'area', 'city', 'state', 'pincode']
 	for i in range(4,10):
 		addrFile = csv.reader(open(full_path('data.csv'), 'r'))
 		allAddrs = []
@@ -294,7 +280,7 @@ class Person:
 		self.phone = get_phone_number()
 		self.email = get_email(self)
 		self.gender = get_gender(firstName)
-		self.country = get_country(firstName)
+		self.country = get_country()
 		self.paswd = random_password()
 		self.hobbies = get_hobbies()
 		self.address = get_address()
