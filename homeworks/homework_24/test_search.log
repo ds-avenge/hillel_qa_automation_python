@@ -1,0 +1,30 @@
+2026-10-13 19:03:10,224 - INFO - Search cars: sort_by=brand, limit=10
+2026-10-13 19:03:10,226 - INFO - Response status: 200
+2026-10-13 19:03:10,226 - INFO - Retrieved cars: 10
+2026-10-13 19:03:10,226 - INFO - Actual values: ['Acura', 'Audi', 'BMW', 'Bugatti', 'Chevrolet', 'Ferrari', 'Ford', 'Honda', 'Hyundai', 'Infiniti']
+2026-10-13 19:03:10,226 - INFO - Expected values: ['Acura', 'Audi', 'BMW', 'Bugatti', 'Chevrolet', 'Ferrari', 'Ford', 'Honda', 'Hyundai', 'Infiniti']
+2026-10-13 19:03:10,227 - INFO - Search cars: sort_by=year, limit=3
+2026-10-13 19:03:10,228 - INFO - Response status: 200
+2026-10-13 19:03:10,228 - INFO - Retrieved cars: 3
+2026-10-13 19:03:10,228 - INFO - Actual values: [2015, 2016, 2017]
+2026-10-13 19:03:10,228 - INFO - Expected values: [2015, 2016, 2017]
+2026-10-13 19:03:10,229 - INFO - Search cars: sort_by=engine_volume, limit=7
+2026-10-13 19:03:10,230 - INFO - Response status: 200
+2026-10-13 19:03:10,231 - INFO - Retrieved cars: 7
+2026-10-13 19:03:10,231 - INFO - Actual values: [0.0, 1.5, 1.6, 1.6, 1.8, 1.8, 2.0]
+2026-10-13 19:03:10,231 - INFO - Expected values: [0.0, 1.5, 1.6, 1.6, 1.8, 1.8, 2.0]
+2026-10-13 19:03:10,231 - INFO - Search cars: sort_by=price, limit=5
+2026-10-13 19:03:10,232 - INFO - Response status: 200
+2026-10-13 19:03:10,233 - INFO - Retrieved cars: 5
+2026-10-13 19:03:10,233 - INFO - Actual values: [28000, 29000, 30000, 31000, 32000]
+2026-10-13 19:03:10,233 - INFO - Expected values: [28000, 29000, 30000, 31000, 32000]
+2026-10-13 19:03:10,233 - INFO - Search cars: sort_by=price, limit=2
+2026-10-13 19:03:10,234 - INFO - Response status: 200
+2026-10-13 19:03:10,234 - INFO - Retrieved cars: 2
+2026-10-13 19:03:10,234 - INFO - Actual values: [28000, 29000]
+2026-10-13 19:03:10,234 - INFO - Expected values: [28000, 29000]
+2026-10-13 19:03:10,235 - INFO - Search cars: sort_by=brand, limit=5
+2026-10-13 19:03:10,236 - INFO - Response status: 200
+2026-10-13 19:03:10,236 - INFO - Retrieved cars: 5
+2026-10-13 19:03:10,236 - INFO - Actual values: ['Acura', 'Audi', 'BMW', 'Bugatti', 'Chevrolet']
+2026-10-13 19:03:10,236 - INFO - Expected values: ['Acura', 'Audi', 'BMW', 'Bugatti', 'Chevrolet']
