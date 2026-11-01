@@ -3,7 +3,7 @@ import time
 
 import psycopg2
 
-
+#1
 def get_connection():
     return psycopg2.connect(
         dbname=os.environ["POSTGRES_DB"],
