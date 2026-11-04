@@ -24,3 +24,6 @@ services:
       POSTGRES_USER: test_user
       POSTGRES_PASSWORD: test_password
       POSTGRES_DB: test_db
+
+    volumes:
+        - ./allure-results:/app/allure-results

@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements-29.txt
 
 COPY . .
 
-CMD ["pytest", "-v", "homework_29.py"]
+CMD ["pytest", "-v", "homework_29.py", "--alluredir=allure-results", "--clean-alluredir"]
