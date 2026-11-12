@@ -1,5 +1,4 @@
 services:
-
   db:
     image: postgres:18
 
@@ -11,13 +10,20 @@ services:
     ports:
       - "5434:5432"
 
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U test_user -d test_db"]
+      interval: 2s
+      timeout: 5s
+      retries: 10
 
   app:
     build:
       context: .
       dockerfile: Dockerfile
+
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
     environment:
       DB_HOST: db
@@ -26,4 +32,4 @@ services:
       POSTGRES_DB: test_db
 
     volumes:
-        - ./allure-results:/app/allure-results
+      - ./allure-results:/app/allure-results
