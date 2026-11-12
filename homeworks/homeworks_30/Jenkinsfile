@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Run tests in Docker') {
+            steps {
+                dir('homeworks/homework_30') {
+                    sh '''
+                        docker compose up --build --abort-on-container-exit
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            allure([
+                includeProperties: false,
+                results: [[path: 'homeworks/homework_30/allure-results']]
+            ])
+
+            dir('homeworks/homework_30') {
+                sh 'docker compose down'
+            }
+        }
+    }
+}
