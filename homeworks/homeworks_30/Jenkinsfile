@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Run tests in Docker') {
             steps {
-                dir('homeworks/homework_30') {
+                dir('homeworks/homeworks_30') {
                     sh '''
                         docker compose up --build --abort-on-container-exit
                     '''
@@ -15,13 +15,13 @@ pipeline {
 
     post {
         always {
-            dir('homeworks/homework_30') {
+            dir('homeworks/homeworks_30') {
                 sh 'docker compose down'
             }
 
             allure([
                 includeProperties: false,
-                results: [[path: 'homeworks/homework_30/allure-results']]
+                results: [[path: 'homeworks/homeworks_30/allure-results']]
             ])
     }
 }
