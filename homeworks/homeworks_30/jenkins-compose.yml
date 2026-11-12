@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: JenkinsDockerfile
+
     container_name: jenkins
     privileged: true
     user: root
