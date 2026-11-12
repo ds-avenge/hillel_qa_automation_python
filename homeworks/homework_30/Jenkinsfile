@@ -21,6 +21,7 @@ pipeline {
 
             allure([
                 includeProperties: false,
+                resultPolicy: 'LEAVE_AS_IS',
                 results: [[path: 'homeworks/homework_30/allure-results']]
             ])
         }
