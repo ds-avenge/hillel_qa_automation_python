@@ -1,0 +1,29 @@
+services:
+
+  db:
+    image: postgres:18
+
+    environment:
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_password
+      POSTGRES_DB: test_db
+
+    ports:
+      - "5434:5432"
+
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+
+    environment:
+      DB_HOST: db
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_password
+      POSTGRES_DB: test_db
+
+    volumes:
+        - ./allure-results:/app/allure-results
