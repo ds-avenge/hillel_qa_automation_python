@@ -23,6 +23,6 @@ pipeline {
                 includeProperties: false,
                 results: [[path: 'homeworks/homeworks_30/allure-results']]
             ])
+        }
     }
-}
 }
