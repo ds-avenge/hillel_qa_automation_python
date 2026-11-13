@@ -89,3 +89,4 @@ def test_delete_student():
 
     with allure.step("Verify student was deleted"):
         assert student is None
+#allure
